@@ -3252,7 +3252,9 @@ static struct mxt224_platform_data mxt224_data = {
 #else
 	.config = mxt224_config,
 	.config_e = mxt224e_config,
+#if !defined(CONFIG_TARGET_LOCALE_NAATT)
 	.t48_ta_cfg = t48_config_e_ta,
+#endif
 #endif
 	.min_x = 0,
 #ifdef CONFIG_TOUCHSCREEN_MXT768E
